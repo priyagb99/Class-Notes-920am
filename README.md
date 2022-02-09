@@ -1,12 +1,6 @@
-# Class Notes for FIN377
-## Donald Bowen
-## Spring 2022
- 
-Key links:
- - [The main website](https://ledatascifi.github.io)
- - [The dashboard](https://ledatascifi.github.io/ledatascifi-2022/content/about/schedule.html)
- - [Tips](https://ledatascifi.github.io/ledatascifi-2022/content/about/tips.html)
- - [Help](https://ledatascifi.github.io/ledatascifi-2022/content/about/help.html)
- - [The LDSF org](https://github.com/orgs/LeDataSciFi)
- - [Announcements, discussions, and help](https://github.com/orgs/LeDataSciFi/teams/classmates-2022)
- - [Lecture files (e.g. "powerpoints")](https://github.com/LeDataSciFi/ledatascifi-2022/tree/main/lectures)
+# Heads up!
+
+This is my repo with code that I run during the class. 
+- **I'm only sharing it so that you can grab some code from during the lectures if we went a little too fast for you to write things down.**
+- This repo will be sloppy. It's not production quality and lecture notes won't be filled out with everything I cover verbally or on paper. 
+- This repo is PURELY here so you can grab code snippets you couldn't fully type out. 
