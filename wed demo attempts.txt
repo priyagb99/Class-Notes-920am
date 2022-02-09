@@ -1,0 +1,42 @@
+macro_df = pdr.data.DataReader(['GDPCA'], 'fred', 1960, 2018)
+##found the function pct_change and implemented it
+##created new variable for the pct change called rGDP_pct and
+## took the pct change of the real GDP aka GDPCA
+##then used the mean function on the pct change variable
+macro_df['rGDP_pct'] = macro_df['GDPCA'].pct_change()
+macro_df['rGDP_pct'].mean()
+
+
+# Fan:
+
+##import realGDP from fred
+import datetime
+import numpy as np
+import pandas as pd
+import pandas_datareader as pdr  
+
+start = datetime.datetime(1960, 1, 1)
+end = datetime.datetime(2019, 1, 27)
+realGDP_df = pdr.data.DataReader(['GDPC1'], 'fred', start, end)
+realGDP_df['Year'] = realGDP_df.index.year
+
+##create annual real GDP dataframe
+annual = realGDP_df.groupby(["Year"])["GDPC1"].sum()
+annual_df=pd.DataFrame(annual.reset_index(name = "Annual_GDP"))
+
+## find percentage change
+annual_df=annual_df.assign(Pct_Change=annual_df['Annual_GDP'].pct_change())
+annual_df
+
+
+# Joseph:
+
+Q4:
+start = datetime.datetime(1960, 1, 1)
+end = datetime.datetime(2018, 12, 31)
+realGDP_df = pdr.data.DataReader('GDPC1', 'fred', start, end)
+print(realGDP_df.pct_change().mean())
+
+Q5:
+realGDP_df.pct_change().groupby((realGDP_df.index.year//10)*10).mean()
+
