@@ -1,4 +1,4 @@
-# Midterm Assignment
+# Midterm roadmap
 
 Basic idea: Whta factors make afirm more exposed/protected from pandemic?
 

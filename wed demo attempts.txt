@@ -1,37 +1,47 @@
-### LUKE
+## DAHEE
 
-### Luke Costello
-	
-hist = year_state_wide['Unemployment_PA'].plot.hist(bins = 28, alpha = .9)
-hist = year_state_wide['Unemployment_CA'].plot.hist(bins = 28, alpha = .5)
-hist = year_state_wide['Unemployment_MI'].plot.hist(bins = 28, alpha = .5)
+from sec_edgar_downloader import Downloader
 
-import seaborn as sns
-sns.distplot(a = year_state_wide['Unemployment_PA'])
-sns.distplot(a = year_state_wide['Unemployment_CA'])
-sns.distplot(a = year_state_wide['Unemployment_MI'])
+?
 
+firms_list = ["AAPL","MSFT","AMZN"]
+for firm in firms_list:
+    dl.get("10-K", firm, after="2019-09-30", before="2020-03-01", amount=1)  
 
-### RYAN 
+## MATT
 
-Q1. 
+from sec_edgar_downloader import Downloader
 
-year_state_wide['pa_une_diff'] = year_state_wide['Unemployment_PA'].diff()
-year_state_wide['pa_une_diff'].plot(kind='line')
+# places to put files - best practices in chapter 2
+os.makedirs('input', exist_ok=True)
 
+# Initialize a downloader instance.
+dl = Downloader("Class-Notes/Exercises/input")
 
-Q2. 
+# Get the latest supported filings, if available, for a specified list of tickers
+tickers = ["MSFT", "AMZN", "AAPL"]
+for ticker in tickers:
+    dl.get("10-K", ticker, after="2019-03-01", before="2020-03-01")
 
-year_state_wide['une_diff'] = (year_state_wide['Unemployment_PA']+year_state_wide['Unemployment_CA']+year_state_wide['Unemployment_MI']).diff()
-year_state_wide['une_diff'].plot(kind='line')
+#######################################
+## PRIYA
 
+from sec_edgar_downloader import Downloader
 
-Q3. 
+dl = Downloader("Users/priyabhatnagar/Desktop/Fin 377")
 
-plt.plot(year_state_wide['Unemployment_PA'], label='PA_Une')
-plt.plot(year_state_wide['Unemployment_CA'], label='CA_Une')
-plt.plot(year_state_wide['Unemployment_MI'], label='MI_Une')
+tickerList = ["MSFT", "AMZN", "AAPL"]
+for i in tickerList:
+    dl.get("10-K", i, after="2019-03-01", before="2020-03-21")
 
-plt.legend()
+######################################
+## SEB
 
-plt.show()
+from sec_edgar_downloader import Downloader
+
+dl = Downloader('./10k_files/sec-edgar-fillings')
+
+firms = ['MSFT','AMZN','AAPL']
+
+for firm in firms:
+    dl.get("10-K",firm, amount=3)
