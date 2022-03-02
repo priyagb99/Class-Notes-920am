@@ -1,34 +1,5 @@
-## DAHEE
-
-from sec_edgar_downloader import Downloader
-
-?
-
-firms_list = ["AAPL","MSFT","AMZN"]
-for firm in firms_list:
-    dl.get("10-K", firm, after="2019-09-30", before="2020-03-01", amount=1)  
-
-## MATT
-
-from sec_edgar_downloader import Downloader
-
-# places to put files - best practices in chapter 2
-os.makedirs('input', exist_ok=True)
-
-# Initialize a downloader instance.
-dl = Downloader("Class-Notes/Exercises/input")
-
-# Get the latest supported filings, if available, for a specified list of tickers
-tickers = ["MSFT", "AMZN", "AAPL"]
-for ticker in tickers:
-    dl.get("10-K", ticker, after="2019-03-01", before="2020-03-01")
-
 #######################################
 ## PRIYA
-
-from sec_edgar_downloader import Downloader
-
-dl = Downloader("Users/priyabhatnagar/Desktop/Fin 377")
 
 tickerList = ["MSFT", "AMZN", "AAPL"]
 for i in tickerList:
@@ -36,10 +7,6 @@ for i in tickerList:
 
 ######################################
 ## SEB
-
-from sec_edgar_downloader import Downloader
-
-dl = Downloader('./10k_files/sec-edgar-fillings')
 
 firms = ['MSFT','AMZN','AAPL']
 
